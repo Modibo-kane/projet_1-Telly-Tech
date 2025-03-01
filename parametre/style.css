@@ -1,0 +1,1159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans: ital, opsz, wght@0,6. .12,200..1000;1,6..12,200.1000&family=Poppins: ital, wght@0,100; 0, 200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1, 200;1,300;1,400;1, 500;1, 600;1, 700;1, 800;1,00&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200..700&family=Roboto+Slab:wght@600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+ /* Styles pour les navigateurs WebKit (Chrome, Safari) */
+ ::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre de défilement */
+    height: 12px; /* Hauteur de la barre de défilement horizontale */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Couleur de la piste de la barre de défilement */
+    border-radius: 10px; /* Arrondir les coins de la piste */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur du pouce de la barre de défilement */
+    border-radius: 10px; /* Arrondir les coins du pouce */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur du pouce lors du survol */
+}
+
+/* Styles pour Firefox */
+* {
+    scrollbar-width: thin; /* Largeur de la barre de défilement */
+    scrollbar-color: #4cf603 #0b3b02; /* Couleur du pouce et de la piste */
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F5FA;
+    font-family:  "Oswald", serif;
+    background: rgb(26,119,4);
+    background: radial-gradient(circle, rgba(26,119,4,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    height: 95%;
+    width: 95%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgba(181, 207, 177, 0.01);
+    backdrop-filter: blur(150px);
+    box-shadow: 1px 0px 5px 1px rgba(117, 127, 123, 0.9)
+}
+.sidebar{
+    display: flex;
+    position: relative;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    padding: 14px;
+    overflow: hidden;
+}
+
+.sidebar .profil{
+    width: 100%;
+    height: 8%;
+    margin-bottom: 30px;
+}
+
+.profil img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profil div{
+    display: inline-block;
+    background-color: #16e413;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.profil span{
+    position: relative;
+    left: 30px;
+    top: -11px;
+    font-size: 27px;
+    font-weight: bold;
+    color: #fff;
+    font-family:  "Oswald", serif;
+}
+
+.profil span:hover{
+    color: #16e413;
+    cursor: pointer;
+}
+
+.dashboard{
+    width: 90%;
+    height: 70px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.dashboard button{
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    height: 80%;
+    width: 100%;
+    margin-top: 5.5px;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 1px 5px 1px rgba(115, 115, 115, 0.89);
+    cursor: pointer;
+    font-family:  "Oswald", serif;
+}
+
+.dashboard button:hover{
+    background-color: #16e413;
+    color: #fff;
+}
+
+.dashboard button a{
+    color: inherit;
+}
+
+.dashboard button span{
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.dashboard button span i{
+    position: relative;
+    top: 5px;
+}
+
+.main-box{
+    height:100%;
+    width: 100%;
+    padding-top: 30px;
+    color: #fff;
+}
+
+
+
+.main-box ul li{
+    width: 100%;
+    height: auto;
+    position: relative;
+    font-size: 20px;
+}
+
+.main-box ul li a{
+    color: inherit;
+}
+
+.main-box ul{
+    cursor: pointer;
+}
+
+.main-box> ul> li:hover{
+    /* box-shadow: 1px 1px 1px 1px rgba(215, 212, 212, 0.89); */
+    border-radius:10px;
+    background-color: #16e413;
+    overflow: hidden;
+}
+
+.main-box ul li ul li:hover{
+    /* border: solid rgba(215, 212, 212, 0.89); */
+    box-shadow: none;
+    cursor: pointer;
+    color: #16e413;
+    font-weight: bold;
+}
+
+.main-box ul li ul {
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.main-box ul li span{
+    position: relative;
+    left: 10%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-family:  "Oswald", serif;
+}
+
+.main-box ul li span> i{
+    position: relative;
+    top: 5.5px;
+}
+
+.main-box ul li ul li{
+    width: 80%;
+    height: auto;
+    text-align: start;
+    position: relative;
+    left: 10%;
+    font-size: 15px;
+    display: none;
+}
+
+.main-box> ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main-box label{
+    background-color: transparent;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+
+.fa-solid_side{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #fff;
+}
+
+.main-box ul li ul input{
+    display: none;
+}
+
+
+/* Style pour l'icône */
+.fa-angle-right, .main-box ul li ul li {
+    transition: transform 0.5s;
+    transform: translateX(20%);
+}
+
+/* Afficher le div et faire tourner l'icône lorsque la case à cocher est cochée */
+#input1:checked ~ .niv1 {
+    display: block;
+}
+
+#input1:checked ~ .fa-solid1 {
+    transform: rotate(90deg);
+}
+
+#input2:checked ~ .niv2 {
+    display: block;
+}
+
+#input2:checked ~ .fa-solid2 {
+    transform: rotate(90deg);
+}
+
+#input3:checked ~ .niv3 {
+    display: block;
+}
+
+#input3:checked ~ .fa-solid3 {
+    transform: rotate(90deg);
+}
+
+#input4:checked ~ .niv4 {
+    display: block;
+}
+
+#input4:checked ~ .fa-solid4 {
+    transform: rotate(90deg);
+}
+
+#input5:checked ~ .niv5 {
+    display: block;
+}
+
+#input5:checked ~ .fa-solid5 {
+    transform: rotate(90deg);
+}
+
+#input6:checked ~ .niv6 {
+    display: block;
+}
+
+#input6:checked ~ .fa-solid6 {
+    transform: rotate(90deg);
+}
+
+/* --------------------------------------------------------------------- */
+
+
+.conteneur{
+    width: 80%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-family:  "Oswald", serif;
+}
+
+.nav-gauche{
+    width: 8%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #16e413; */
+}
+
+.nav-gauche>label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8%;
+    height: 10%;
+    cursor: pointer;
+    /* background-color: #16e413; */
+}
+
+.nav-gauche>label:hover > i{
+    color: #16e413;
+    transition: 0.8s;
+}
+
+.nav-gauche>label>i{
+    margin: auto;
+    color: #fff;
+}
+
+.vide{
+    width: 65%;
+}
+
+.nav-droite{
+    width: 27%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #16e413; */
+    padding: 5px;
+   
+}
+
+.nav-droite> .search{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #16e413; */
+    position: relative;
+}
+
+.nav-droite> .search >input{
+    width: 80%;
+    height: 70%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+    font-family:  "Oswald", serif;
+    display: none;
+}
+
+.nav-droite> .search > label{
+    position: absolute;
+    background-color: #16e413;
+    width: 25%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px ;
+    right: -8px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.nav-droite> .search >#fa-search:checked~ input[type="text"]{
+    transition: 1s;
+    display: block;
+}
+
+.nav-droite> .search > label >.fa-search{
+    color: #fff;
+}
+
+.nav-droite .profil2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+}
+
+.nav-droite .profil2 div > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+
+.nav-droite .profil2>label{
+    /* background-color: rebeccapurple; */
+    position: relative;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-droite .profil2>label> i{
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-droite .profil2>label> i:hover{
+    color: #16e413;
+    transition: 0.8s;
+    box-shadow: 1px 1px 5px 0px rgba(117, 127, 123, 0.9);
+    transform: rotate(90deg);
+}
+
+.nav-droite >.bt-drl{
+    position: absolute;
+    background-color: #16e413;
+    width: 8%;
+    padding: 1%;
+    color: #000;
+    top: 75px;
+    right: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    display: none;
+    transition: 0.8s;
+}
+
+.nav-droite >.bt-drl > h3:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-droite >.bt-drl a{
+    color: inherit;
+}
+
+.nav-droite > input[type="checkbox"]:checked + .bt-drl{
+    display: block;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+.corps{
+    min-height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+   
+    gap: 5px;
+    flex-direction: column;
+    background: rgb(26,89,11);
+    background: radial-gradient(circle, rgba(26,89,11,1) 0%, rgb(4, 58, 1) 35%, rgba(0,0,0,1) 100%);
+}
+
+.corps-ligne1{
+    width: 95%;
+    min-height:15% ;
+}
+
+.corps-bloc{
+    min-height:55%;
+    width: 85%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 1px 5px 1px rgba(115, 115, 115, 0.89);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 15%;
+}
+
+.corps-bloc label, p{
+    font-size: 20px;
+    color: #16e413;
+}
+
+.corps-bloc input[type="file"]{
+   display: none;
+}
+
+.corps-ligne2-bloc2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    color: white;
+    background-color: #000000;
+    box-shadow: 0px 1px 5px 1px rgba(115, 115, 115, 0.89);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image:hover{
+    background-color: #16e413;
+    color: #F2F5FA;
+}
+
+.corps-bloc input[type="text"], .image{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    font-weight: 700;
+}
+
+.corps-ligne1{
+    color: #16e413;
+    font-size: 30px;
+}
+
+.corps-ligne2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+   
+}
+
+.corps-ligne2-bloc1, .corps-ligne2-bloc2, .corps-ligne2-bloc3{
+    display: flex;
+    flex-direction: column;
+}
+
+.corps-ligne3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.corps-ligne3-bloc1, .corps-ligne3-bloc2, .corps-ligne3-bloc3{
+    display: flex;
+    flex-direction: column;
+
+}
+
+textarea{
+    height: 150px;
+    width: 250px;
+    font-weight: 700;
+}
+
+.corps-ligne4 button{
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #000;
+    color: #16e413;
+    box-shadow: 0px 1px 5px 1px rgba(115, 115, 115, 0.89);
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.corps-ligne4 button:hover{
+    background-color: #16e413;
+    color: #000;
+}
+
+.corps-ligne4 button a{
+    color: inherit;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+
+
+main>input[type="checkbox"]{
+    display: none;
+}
+
+main>input[type="checkbox"]:checked ~ .sidebar{
+    display: none;
+    overflow-y: scroll;
+    transition: 0.2s all ease;
+}
+
+main>input[type="checkbox"]:checked ~ .conteneur{
+    width: 100%;
+    transition: 0.2s all ease;
+}
+
+.conteneur> nav>label{
+    position: absolute;
+    top: 1%;
+    width: 50px;
+    height: 60px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.conteneur>nav>label:hover~ i{
+    color: #16e413;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 700px) {
+    /* le sidebar --------------------------------------------------------------------------------------------------------- */
+    .sidebar{
+        width: 80%;
+        display: none;
+        transform: translateX(0%);
+        transition: 0.5s ease all;
+        position: absolute;
+        z-index: 5;
+        background-color: black;
+        overflow-y: scroll;
+    }
+
+    .conteneur{
+        width: 100%;
+    }
+
+    main>input[type="checkbox"]:checked ~ .sidebar{
+        transform: translateX(0%);
+        overflow-y: scroll;
+        width: 90%;
+        height: 100%;
+        display: block;
+        transition: 0.2s all ease;
+    }
+
+    main>input[type="checkbox"]:checked ~ .conteneur{
+        width: 100%;
+        transition: 0.2s all ease;
+    }
+
+    /* le nav bar ----------------------------------------------------------------------------------------------- */
+    
+    nav{
+        flex-direction: row-reverse;
+    }
+
+    .vide{
+        display: none;
+    }
+
+    .nav-droite{
+        width: 80%;
+    }
+
+    .nav-droite> .bt-drl{
+        width: 20%;
+        right: 40px;
+    }
+
+    .nav-gauche>label{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: 100%;
+        padding: 5px;
+        cursor: pointer;
+        /* background-color: #16e413; */
+    }
+
+    .nav-gauche>label:active > i{
+        color: #16e413;
+        transition: 0.8s;
+    }
+
+    .nav-droite >.bt-drl {
+        position: absolute;
+        right: 65px;
+        background-color: #fff;
+        width: 150px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    .nav-droite >.bt-drl> h3:hover{
+        color: #16e413;
+    }
+
+    /*  le corps --------------------------------------------------------------------------------------------------------------------- */
+    
+    .corps{
+        /* padding-bottom: 50px; */
+        overflow-y: scroll;
+    }
+
+    .corps-ligne1{
+        font-size: 20px;
+        height: 15%;
+    }
+    
+    .corps > .corps-bloc{
+        overflow-y: scroll;
+        min-height: 85%;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        padding-bottom: 20px;
+        gap: 15px;
+    }
+
+    .corps-bloc > .corps-ligne2, .corps-ligne3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+    
+
+    .corps-bloc input[type="text"], .image{
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        outline: none;
+        text-align: center;
+        font-weight: 700;
+
+    }
+
+    .corps-bloc .image{
+        margin-bottom: 20px;
+    }
+
+    .corps-bloc textarea{
+        height: 100px;
+        width: 100%;
+        font-weight: 700;
+    }
+
+    .corps-ligne4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .corps-ligne4 > button{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+@media screen and (min-width: 760px) and (max-width: 1000px){
+    /* le sidebar --------------------------------------------------------------------------------------------------------- */
+    .sidebar{
+       width: 80%;
+       display: none;
+       transform: translateX(0%);
+       transition: 0.5s ease all;
+       position: absolute;
+       z-index: 5;
+       background-color: black;
+       overflow-y: scroll;
+   }
+
+   .conteneur{
+       width: 100%;
+   }
+
+   main>input[type="checkbox"]:checked ~ .sidebar{
+       transform: translateX(0%);
+       overflow-y: scroll;
+       width: 90%;
+       display: block;
+       height: 100%;
+       transition: 0.2s all ease;
+   }
+
+   main>input[type="checkbox"]:checked ~ .conteneur{
+       width: 100%;
+       transition: 0.2s all ease;
+   }
+
+   .profil{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       flex-direction: row;
+       margin-top: 50px;
+       /* background-color: #16e413;
+       height: 60px;
+       width: 60px;
+       border-radius: 50%; */
+       /* position: relative; */
+       /* top: 50%; */
+       /* left: 10%; */
+       /* transform: translateY(-50%); */
+   }
+
+   .profil div {
+       /* display: flex;
+       justify-content: space-around;
+       align-items: center;
+       flex-direction: row; */
+       /* background-color: #16e413; */
+       height: 100px;
+       width: 100px;
+       border-radius: 5%;
+       /* position: relative; */
+       /* top: 50%; */
+       /* left: 10%; */
+       /* transform: translateY(-50%); */
+   }
+
+   .profil div  img{
+       height: 100px;
+       width: 100px;
+       border-radius: 5%;
+   }
+
+   
+   /* le nav bar ----------------------------------------------------------------------------------------------- */
+   
+   nav{
+       flex-direction: row-reverse;
+       height:20%; 
+   }
+
+   .vide{
+       display: none;
+}
+
+.nav-droite{
+   width: 80%;
+}
+
+.nav-droite> .bt-drl{
+   width: 20%;
+   right: 40px;
+}
+
+.nav-gauche>label{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: auto;
+   height: 100%;
+   padding: 5px;
+   cursor: pointer;
+   /* background-color: #16e413; */
+}
+
+.nav-gauche>label:active > i{
+   color: #16e413;
+   transition: 0.8s;
+}
+
+.nav-droite >.bt-drl {
+   position: absolute;
+   right: 155px;
+   top:140px;
+   background-color: #fff;
+   width: 170px;
+   height: 140px;
+   font-size: 22px;
+   border-radius: 5px;
+}
+
+.nav-droite >.bt-drl> h3:hover{
+   color: #16e413;
+}
+
+.profil{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: row;
+   margin-top: 50px;
+   /* background-color: #16e413;
+   height: 60px;
+   width: 60px;
+   border-radius: 50%; */
+   /* position: relative; */
+   /* top: 50%; */
+   /* left: 10%; */
+   /* transform: translateY(-50%); */
+}
+
+.profil div {
+   /* display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: row; */
+   /* background-color: #16e413; */
+   height: 100px;
+   width: 100px;
+   border-radius: 5%;
+   /* position: relative; */
+   /* top: 50%; */
+   /* left: 10%; */
+   /* transform: translateY(-50%); */
+}
+
+.profil div  img{
+   height: 100px;
+   width: 100px;
+   border-radius: 5%;
+}
+
+.nav-droite .profil2 div img{
+   width:120px;
+   height:120px;
+}
+
+.nav-droite> .search >label{
+   height:50%;
+}
+
+.nav-droite> .search >input {
+   width: 80%;
+   height: 50%;
+   border: none;
+   border-radius: 5px;
+   padding: 5px;
+   font-size: 18px;
+   font-family: "Oswald", serif;
+   display: none;
+}
+
+}
+
+@media screen and (width: 1024px) /*and (height:1366px)*/{
+    /* le sidebar --------------------------------------------------------------------------------------------------------- */
+    .sidebar{
+       width: 80%;
+       display: none;
+       transform: translateX(0%);
+       transition: 0.5s ease all;
+       position: absolute;
+       z-index: 5;
+       background-color: black;
+       overflow-y: scroll;
+   }
+
+   .conteneur{
+       width: 100%;
+   }
+
+   main>input[type="checkbox"]:checked ~ .sidebar{
+       transform: translateX(0%);
+       overflow-y: scroll;
+       width: 90%;
+       display: block;
+       height: 100%;
+       transition: 0.2s all ease;
+   }
+
+   main>input[type="checkbox"]:checked ~ .conteneur{
+       width: 100%;
+       transition: 0.2s all ease;
+   }
+   /* nav------------------------------------------------------------------------------------------------- */
+   nav{
+       flex-direction: row-reverse;
+       height:20%; 
+   }
+
+       .vide{
+           display: none;
+       }
+   
+       .nav-droite{
+           width: 80%;
+       }
+   
+       .nav-droite> .bt-drl{
+           width: 20%;
+           right: 40px;
+       }
+
+       .nav-gauche>label{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: auto;
+           height: 100%;
+           padding: 5px;
+           cursor: pointer;
+           /* background-color: #16e413; */
+       }
+
+       .nav-gauche>label:active > i{
+           color: #16e413;
+           transition: 0.8s;
+       }
+
+       .nav-droite >.bt-drl {
+           position: absolute;
+           right: 275px;
+           top:120px;
+           background-color: #fff;
+           width: 170px;
+           height: 140px;
+           font-size: 22px;
+           border-radius: 5px;
+       }
+   
+       .nav-droite >.bt-drl> h3:hover{
+           color: #16e413;
+       }
+
+       .profil{
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           flex-direction: row;
+           margin-top: 50px;
+           /* background-color: #16e413;
+           height: 60px;
+           width: 60px;
+           border-radius: 50%; */
+           /* position: relative; */
+           /* top: 50%; */
+           /* left: 10%; */
+           /* transform: translateY(-50%); */
+       }
+   
+       .profil div {
+           /* display: flex;
+           justify-content: space-around;
+           align-items: center;
+           flex-direction: row; */
+           /* background-color: #16e413; */
+           height: 100px;
+           width: 100px;
+           border-radius: 5%;
+           /* position: relative; */
+           /* top: 50%; */
+           /* left: 10%; */
+           /* transform: translateY(-50%); */
+       }
+   
+       .profil div  img{
+           height: 100px;
+           width: 100px;
+           border-radius: 5%;
+       }
+
+       .nav-droite .profil2 div img{
+           width:120px;
+           height:120px;
+       }
+
+       .nav-droite> .search >label{
+           height:50%;
+       }
+
+       .nav-droite> .search >input {
+           width: 80%;
+           height: 50%;
+           border: none;
+           border-radius: 5px;
+           padding: 5px;
+           font-size: 18px;
+           font-family: "Oswald", serif;
+           display: none;
+       }
+   /* le corps ----------------------------------------------------------------------------------------- */
+       /* .corps{
+           min-height: 90%;
+           height: auto;
+           padding: 5px;
+           padding-bottom: 35px;
+           width: 100%;
+           display: flex;
+           overflow-y: scroll;
+           gap: 20px;
+           flex-direction: column;
+           overflow-y: scroll;
+           background: rgb(26,89,11);
+           background: radial-gradient(circle, rgba(26,89,11,1) 0%, rgb(4, 58, 1) 35%, rgba(0,0,0,1) 100%);
+       } */
+   
+}
